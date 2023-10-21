@@ -9,7 +9,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-readline.question("what is the name of your app?", async (appName) => {
+readline.question("what is the name of your app?: ", async (appName) => {
   console.log("[*] init create react app with webpack");
   console.log("[*] reading react webpack template");
 
