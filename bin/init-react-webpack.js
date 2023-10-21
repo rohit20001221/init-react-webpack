@@ -5,8 +5,8 @@ const path = require("path");
 console.log("[*] init create react app with webpack");
 console.log("[*] reading react webpack template");
 
-const packageJson = fs.readFileSync(
-  path.join(__dirname, "templates", "react-webpack", "package.json")
+const templateDir = fs.readdirSync(
+  path.join(__dirname, "templates", "react-webpack")
 );
 
-console.log(packageJson.toString());
+templateDir.forEach((folder) => console.log(folder));
