@@ -1,6 +1,6 @@
 {
   "name": "init-react-webpack",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "bin": {
     "init-react-webpack": "bin/init-react-webpack.js"
