@@ -1,0 +1,11 @@
+{
+  "name": "init-react-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "init-react-webpack": "bin/init-react-webpack.js"
+  },
+  "keywords": [],
+  "author": "rohit20001221",
+  "license": "ISC"
+}
