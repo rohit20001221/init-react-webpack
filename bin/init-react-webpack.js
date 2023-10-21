@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-const { chdir } = require("process");
+const { chdir, exit } = require("process");
 const { execSync } = require("child_process");
 
 const readline = require("readline").createInterface({
@@ -23,8 +23,13 @@ readline.question("what is the name of your app?", async (appName) => {
   const packageJson = JSON.parse(fs.readFileSync("package.json").toString());
   packageJson.name = appName;
 
-  fs.writeFileSync("package.json", JSON.stringify(packageJson));
+  fs.writeFileSync("package.json", JSON.stringify(packageJson, undefined, 1));
 
   execSync("git init");
   execSync("npm install");
+
+  execSync("git add .");
+  execSync('git commit -m "initialize react webpack app"');
+
+  exit();
 });
