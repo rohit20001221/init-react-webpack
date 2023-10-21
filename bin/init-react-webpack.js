@@ -9,4 +9,4 @@ const templateDir = fs.readdirSync(
   path.join(__dirname, "templates", "react-webpack")
 );
 
-templateDir.forEach((folder) => console.log(folder));
+fs.cpSync(templateDir, "react-app", { recursive: true });
